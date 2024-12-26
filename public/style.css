@@ -1,0 +1,98 @@
+/* Simple Styling for Lemon Portfolio */
+
+/* Body and Layout */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+  }
+  
+  /* Header Section */
+  header {
+    background-color: #f9d342;
+    color: #333;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  /* Parallax Sections */
+  .parallax {
+    height: 500px; /* Adjust the height of the parallax section */
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  
+  #parallax1 {
+    background-image: url('images/minsung1.jpg'); /* Your first background image */
+  }
+  
+  #parallax2 {
+    background-image: url('images/minsung2.JPG'); /* Your second background image */
+  }
+  
+  #parallax1 h2, #parallax2 h2 {
+    font-size: 3rem;
+  }
+  
+  #parallax1 p, #parallax2 p {
+    font-size: 1.5rem;
+  }
+  
+  /* Artwork Section */
+  #artwork {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  #artwork .gallery img {
+    width: 30%;
+    margin: 10px;
+    border-radius: 10px;
+  }
+  
+  /* Feedback Section */
+  #feedback {
+    background-color: #fff;
+    padding: 20px;
+    margin: 20px auto;
+    width: 80%;
+    max-width: 600px;
+    border-radius: 10px;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  label, input, textarea {
+    margin: 10px 0;
+  }
+  
+  input, textarea {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  button {
+    background-color: #f9d342;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #f9c734;
+  }
+  
