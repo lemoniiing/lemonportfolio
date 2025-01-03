@@ -1,98 +1,332 @@
-/* Simple Styling for Lemon Portfolio */
-
-/* Body and Layout */
-body {
-    font-family: Arial, sans-serif;
+/* Basic reset */
+* {
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
-  }
-  
-  /* Header Section */
-  header {
-    background-color: #f9d342;
-    color: #333;
-    padding: 20px;
-    text-align: center;
-  }
-  
-  /* Parallax Sections */
-  .parallax {
-    height: 500px; /* Adjust the height of the parallax section */
+    box-sizing: border-box;
+}
+
+/* Header Styles */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    background-color: #e4ad0a;
+    padding: 10px 25px;
+    z-index: 100;
+}
+
+header .logo {
+    display: flex;
+    align-items: center;
+}
+
+header .logo img {
+    height: 60px;
+    margin-right: 15px;
+    transition: transform 0.3s ease;
+}
+
+header .logo img:hover {
+    transform: scale(1.1);
+}
+
+header .logo h1 {
+    font-size: 2rem;
+    color: white;
+    font-weight: bold;
+}
+
+header nav ul {
+    list-style-type: none;
+    display: flex;
+}
+
+header nav ul li {
+    margin-left: 30px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 17px;
+    position: relative;
+}
+
+header nav ul li a::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: transparent;
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    transition: background-color 0.3s ease;
+}
+
+header nav ul li a:hover::after {
+    background-color: yellow;
+}
+
+/* Parallax Section */
+.parallax {
+    height: 100vh;
+    background-image: url('images/about.jpg');
     background-position: center;
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
+    display: flex;
+    justify-content: center;
+    padding-top: 210px;
+}
+
+.welcome-text h1 {
+    font-size: 7rem;
     color: white;
+    font-weight: bold;
+    opacity: 0;
+    animation: fadeIn 3s forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.parallax.scrolled .welcome-text {
+    opacity: 0;
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+/* About Section */
+#about {
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: #fff5cd;
+    padding: 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+.about-container {
     text-align: center;
-  }
-  
-  #parallax1 {
-    background-image: url('images/minsung1.jpg'); /* Your first background image */
-  }
-  
-  #parallax2 {
-    background-image: url('images/minsung2.JPG'); /* Your second background image */
-  }
-  
-  #parallax1 h2, #parallax2 h2 {
+    width: 100%;
+    padding: 20px;
+    position: relative;
+    z-index: 2;
+}
+
+.text-wrapper {
+    max-width: 800px; /* Limits the width of the text */
+    margin: 0 auto; /* Centers the text */
+    padding: 0 20px; /* Adds padding for extra spacing */
+    text-align: center; /* Ensures the text stays centered */
+}
+
+.about-container h2 {
     font-size: 3rem;
-  }
-  
-  #parallax1 p, #parallax2 p {
-    font-size: 1.5rem;
-  }
-  
-  /* Artwork Section */
-  #artwork {
-    text-align: center;
-    padding: 20px;
-  }
-  
-  #artwork .gallery img {
-    width: 30%;
-    margin: 10px;
-    border-radius: 10px;
-  }
-  
-  /* Feedback Section */
-  #feedback {
-    background-color: #fff;
-    padding: 20px;
-    margin: 20px auto;
-    width: 80%;
-    max-width: 600px;
-    border-radius: 10px;
-  }
-  
-  form {
+    color: #333;
+    margin-bottom: 20px;
+    z-index: 1;
+}
+
+.about-container p {
+    font-size: 1.2rem;
+    color: #666;
+    line-height: 1.6;
+    z-index: 1;
+}
+
+.lemon-images {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px; /* Adds space between the lemons */
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+}
+
+.lemon-half {
+    width: 40%; /* Lemons retain their size */
+    transition: transform 1s ease-out;
+    transform: translateX(0);
+}
+
+/* Responsive Design for About Section */
+@media (max-width: 768px) {
+    .text-wrapper {
+        max-width: 90%; /* Adjusts text width for smaller screens */
+    }
+
+    .lemon-images {
+        flex-direction: column;
+        gap: 10px; /* Less gap for vertical stacking */
+    }
+
+    .lemon-half {
+        width: 70%; /* Adjusts lemon size for smaller screens */
+    }
+}
+
+/* Artwork Section */
+.parallax-sections {
+    position: relative;
+    height: 300vh;
+    background-image: url('images/about.jpg');
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.sub-section {
+    height: 100vh;
     display: flex;
     flex-direction: column;
-  }
-  
-  label, input, textarea {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.section-title {
+    font-size: 3rem;
+    color: white;
+    margin-bottom: 50px;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.image-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    height: 300px;
+    overflow: hidden;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.image-row img {
+    height: 100%;
+    width: auto;
+    object-fit: contain;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.image-row img:hover {
+    transform: scale(1.05);
+}
+
+.sub-section.visible .section-title,
+.sub-section.visible .image-row {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Feedback Form Section */
+#feedback-section {
+    padding: 30px 30px;
+    display: flex;
+    justify-content: center;
+    background-color: #fff5cd;
+}
+
+#feedback-section h2 {
+    margin-bottom: 20px;
+}
+
+.feedback-container {
+    background-color: white;
+    padding: 30px;
+    margin: 110px 20px 50px 20px;
+    padding-bottom: 50px;
+    border: 5px solid #f9d342;
+    border-radius: 15px;
+    width: 100%;
+    max-width: 600px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label, input, textarea {
     margin: 10px 0;
-  }
-  
-  input, textarea {
+}
+
+input, textarea {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
     padding: 10px;
     border: 1px solid #ddd;
     border-radius: 5px;
-  }
-  
-  button {
+    width: 100%;
+    background-color: #fff5cd;
+}
+
+textarea {
+    resize: none;
+}
+
+button {
     background-color: #f9d342;
     border: none;
     color: white;
+    margin-top: 15px;
     padding: 10px 20px;
     border-radius: 5px;
     cursor: pointer;
-  }
-  
-  button:hover {
+}
+
+button:hover {
     background-color: #f9c734;
-  }
-  
+}
+
+/* Footer Styles */
+footer {
+    background-color: #e4ad0a;
+    color: white;
+    padding: 15px;
+    text-align: center;
+}
+
+footer p {
+    font-size: 17px;
+    margin-bottom: 15px;
+}
+
+footer .contact-icons {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+footer .contact-icons a img {
+    width: 30px;
+    height: 30px;
+    transition: transform 0.3s;
+}
+
+footer .contact-icons a img:hover {
+    transform: scale(1.1);
+}

@@ -9,37 +9,78 @@
 <body>
   <!-- Header Section -->
   <header>
-    <h1>Lemon Portfolio</h1>
-    <p>Welcome to my artwork portfolio! Browse my creations below.</p>
+    <div class="logo" id="logo">
+        <img src="images/logo.png" alt="Lemon Logo">
+        <h1>Lemon's Portfolio</h1>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="#about">ABOUT</a></li>
+        <li><a href="#freshman">FRESHMAN</a></li>
+        <li><a href="#sophomore">SOPHOMORE</a></li>
+        <li><a href="#junior">JUNIOR</a></li>
+        <li><a href="#feedback-section">FEEDBACK</a></li>
+      </ul>
+    </nav>
   </header>
 
-  <!-- Parallax Section 1 -->
-  <section id="parallax1" class="parallax">
-    <h2>My Artwork Showcase</h2>
-    <p>Scroll down to see the parallax effect in action!</p>
-  </section>
-
-  <!-- Artwork Section -->
-  <section id="artwork">
-    <h2>My Artwork</h2>
-    <div class="gallery">
-      <img src="images/art1.jpg" alt="Artwork 1">
-      <img src="images/art2.jpg" alt="Artwork 2">
-      <img src="images/art3.jpg" alt="Artwork 3">
-      <!-- Add more images as needed -->
+  <!-- Welcome Section -->
+  <section id="home" class="parallax">
+    <div class="welcome-text">
+      <h1>Welcome!</h1>
     </div>
   </section>
 
-  <!-- Parallax Section 2 -->
-  <section id="parallax2" class="parallax">
-    <h2>Another Artwork Section</h2>
-    <p>Experience the effect with another background!</p>
-  </section>
+  <!-- About Me Section -->
+  <section id="about">
+    <div class="about-container">
+        <div class="text-wrapper">
+          <h2>About Me</h2>
+          <p>Welcome to my portfolio website!<br>
+            My name is Ashley, and I am currently a third-year multimedia design student at the National Taichung University of Science and Technology. This website was created to showcase the artwork I've made over the past three years in school, including hand drawn illustrations, poster designs, and animation videos. Thank you for visiting, and I hope you enjoy!</p>    
+        </div>
+        <div class="lemon-images">
+            <img src="images/lemon1.png" class="lemon-half left" alt="Left Lemon">
+            <img src="images/lemon2.png" class="lemon-half right" alt="Right Lemon">
+        </div>
+    </div>
+</section>
 
-  <!-- Feedback Form Section -->
-  <section id="feedback">
-    <h2>Leave Your Feedback</h2>
-    <form id="feedback-form">
+<!-- Artwork Sections -->
+<section class="parallax-sections">
+    <div id="freshman" class="sub-section">
+      <h2 class="section-title">Freshman Year</h2>
+      <div class="image-row">
+        <img src="images/1-1-1.JPG" alt="Freshman 1">
+        <img src="images/1-1-3.JPG" alt="Freshman 2">
+        <img src="images/1-1-4.jpg" alt="Freshman 3">
+      </div>
+    </div>
+  
+    <div id="sophomore" class="sub-section">
+      <h2 class="section-title">Sophomore Year</h2>
+      <div class="image-row">
+        <img src="images/1-2-1.jpg" alt="Sophomore 1">
+        <img src="images/1-2-2.png" alt="Sophomore 2">
+        <img src="images/1-2-3.jpg" alt="Sophomore 3">
+      </div>
+    </div>
+  
+    <div id="junior" class="sub-section">
+      <h2 class="section-title">Junior Year</h2>
+      <div class="image-row">
+        <img src="images/2-2-1.jpg" alt="Junior 1">
+        <img src="images/2-2-2.jpg" alt="Junior 2">
+        <img src="images/2-2-3.png" alt="Junior 3">
+      </div>
+    </div>
+  </section>  
+
+  <!-- Feedback Section -->
+  <section id="feedback-section">
+    <div class="feedback-container">
+      <h2>Leave A Comment!</h2>
+      <form id="feedback-form">
         <label for="name">Your Name:</label>
         <input type="text" id="name" name="name" required>
       
@@ -51,7 +92,19 @@
       
         <button type="submit">Submit Feedback</button>
       </form>
+    </div>
   </section>
+
+  <!-- Footer Section -->
+  <footer>
+    <p>Contact me!</p>
+    <div class="contact-icons">
+      <a href="https://line.me"><img src="images/line.png" alt="Line"></a>
+      <a href="https://instagram.com/lemoniiing"><img src="images/instagram.png" alt="Instagram"></a>
+      <a href="https://www.facebook.com/bethotted/"><img src="images/facebook.png" alt="Facebook"></a>
+      <a href="mailto:lemonutc@gmail.com"><img src="images/email.png" alt="Email"></a>
+    </div>
+  </footer>
 
   <script src="script.js"></script>
 </body>
