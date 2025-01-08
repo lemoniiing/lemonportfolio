@@ -280,7 +280,7 @@ header nav ul li a:hover::after {
 #sophomore .parallax_layer_1 {
     background-image: url("images/02-1.PNG");
     top: 10%;
-    transform: translateZ(-2px) rotateZ(3deg);
+    transform: translateZ(-2px) rotateZ(-5deg);
     background-size: contain;
 }
 
@@ -289,15 +289,15 @@ header nav ul li a:hover::after {
     top: -15%;
     left: 43%;
     background-position: right;
-    transform: translateZ(-10px) rotateZ(-2deg);
+    transform: translateZ(-10px) rotateZ(5deg);
     background-size: contain;
 }
 
 #sophomore .parallax_layer_3 {
     background-image: url("images/02-3.png");
-    top: 10%;
+    top: 20%;
     left: 15%;
-    transform: translateZ(-25px) rotateZ(7deg);
+    transform: translateZ(-25px) rotateZ(-5deg);
     background-size: contain;
 }
 
@@ -308,34 +308,34 @@ header nav ul li a:hover::after {
     width: calc(var(--w) * 0.9);
     height: calc(var(--h) * 0.9);
     background-size: contain;
-    transform: translateZ(-5px) rotateZ(15deg);
+    transform: translateZ(-5px) rotateZ(-15deg);
 }
 
 #sophomore .parallax_layer_5 {
     background-image: url("images/02-5.png");
     outline: 0;
     border: 0;
-    top: 130%;
+    top: 170%;
     left: 10%;
     height: calc(var(--h) * 0.4);
     background-size: contain;
-    transform: rotateZ(-15deg);
+    transform: rotateZ(15deg);
 }
 
 /* Junior Section */
 #junior .parallax_layer_1 {
     background-image: url("images/03-1.jpg");
     top: 10%;
-    transform: translateZ(-2px) rotateZ(3deg);
+    transform: translateZ(-2px) rotateZ(5deg);
     background-size: contain;
 }
 
 #junior .parallax_layer_2 {
     background-image: url("images/03-2.jpg");
     top: -15%;
-    left: 43%;
+    left: 50%;
     background-position: right;
-    transform: translateZ(-10px) rotateZ(-2deg);
+    transform: translateZ(-10px) rotateZ(-5deg);
     background-size: contain;
 }
 
@@ -343,7 +343,7 @@ header nav ul li a:hover::after {
     background-image: url("images/03-3.png");
     top: 50%;
     left: -5%;
-    transform: translateZ(-15px) rotateZ(7deg);
+    transform: translateZ(-15px) rotateZ(10deg);
     background-size: contain;
 }
 
@@ -354,18 +354,18 @@ header nav ul li a:hover::after {
     width: calc(var(--w) * 0.9);
     height: calc(var(--h) * 0.9);
     background-size: contain;
-    transform: translateZ(-5px) rotateZ(15deg);
+    transform: translateZ(-5px) rotateZ(-10deg);
 }
 
 #junior .parallax_layer_5 {
     background-image: url("images/03-5.png");
     outline: 0;
     border: 0;
-    top: 130%;
-    left: 5%;
+    top: 160%;
+    left: 15%;
     height: calc(var(--h) * 0.4);
     background-size: contain;
-    transform: rotateZ(-15deg);
+    transform: rotateZ(15deg);
 }
 
 
