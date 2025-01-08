@@ -65,3 +65,21 @@ app.post('/submit-feedback', (req, res) => {
 app.listen(PORT, () => {
   console.log(`Server running on http://localhost:${PORT}`);
 });
+
+// Route to export feedback data in JSON format
+app.get('/export-feedback-json', (req, res) => {
+  const sql = `SELECT * FROM feedback`;
+
+  db.all(sql, [], (err, rows) => {
+    if (err) {
+      console.error('Error retrieving feedback data:', err.message);
+      return res.status(500).json({ error: 'Failed to retrieve feedback data.' });
+    }
+
+    // Save the feedback data to feedbackdb.json
+    const fs = require('fs');
+    fs.writeFileSync('feedbackdb.json', JSON.stringify(rows, null, 2));
+
+    res.status(200).json({ message: 'Feedback data exported to feedbackdb.json' });
+  });
+});
