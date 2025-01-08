@@ -46,7 +46,7 @@ document.getElementById('feedback-form').addEventListener('submit', function(eve
     const feedback = document.getElementById('feedback').value;
 
     // Send the feedback data to the server
-    fetch('http://localhost:3000/submit-feedback', {
+    fetch('http://localhost:3001/submit-feedback', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
