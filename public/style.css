@@ -77,6 +77,23 @@ header nav ul li a:hover::after {
     background-color: yellow;
 }
 
+/* Responsive header */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column; /* Stacks items vertically */
+        align-items: flex-start; /* Aligns items to the left */
+    }
+
+    header nav {
+        flex-direction: column; /* Makes nav links stack vertically */
+        gap: 10px; /* Reduces spacing between links */
+    }
+
+    header .logo {
+        font-size: 1.2rem; /* Adjusts logo size */
+    }
+}
+
 /* Parallax Section */
 .parallax {
     height: 100vh;
@@ -187,10 +204,7 @@ header nav ul li a:hover::after {
     }
 }
 
-
-
-
-
+/* Artwork Section */
 .parallax_container {
     width: var(--w);
     height: var(--h);
@@ -212,7 +226,7 @@ header nav ul li a:hover::after {
     text-shadow: 5px 5px 5px rgb(66, 58, 48);
 }
 
-/* Basic settings for all layers */
+/* Basic settings for all artwork layers */
 .basic_setting {
     background-size: contain;
     background-repeat: no-repeat;
@@ -222,12 +236,11 @@ header nav ul li a:hover::after {
     top: 0;
     filter: brightness(100%); /* Initial brightness */
     transition: -webkit-filter 0.5s; /* Smooth transition on hover */
-
-    /* Hover effect to increase brightness */
-    &:hover {
-        filter: brightness(130%);
-    }
 }
+
+.basic_setting:hover {
+    filter: brightness(130%);
+    }
 
 /* Freshman Section */
 #freshman .parallax_layer_1 {
@@ -268,12 +281,11 @@ header nav ul li a:hover::after {
     background-image: url("images/01-5.JPG");
     outline: 0;
     border: 0;
-    top: 130%;
+    top: 110%;
     left: 10%;
     height: calc(var(--h) * 0.4);
     background-size: contain;
     transform: rotateZ(-15deg);
-    /* transition: all 0.3s; */
 }
   
 /* Sophomore Section */
@@ -315,7 +327,7 @@ header nav ul li a:hover::after {
     background-image: url("images/02-5.png");
     outline: 0;
     border: 0;
-    top: 170%;
+    top: 150%;
     left: 10%;
     height: calc(var(--h) * 0.4);
     background-size: contain;
@@ -367,68 +379,6 @@ header nav ul li a:hover::after {
     background-size: contain;
     transform: rotateZ(15deg);
 }
-
-
-/* Artwork Section */
-/* .parallax-sections {
-    position: relative;
-    height: 300vh;
-    background-image: url('images/about.jpg');
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-.sub-section {
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 20px;
-    background: rgba(0, 0, 0, 0.5);
-}
-
-.section-title {
-    font-size: 3rem;
-    color: white;
-    margin-bottom: 50px;
-    opacity: 0;
-    transform: translateY(50px);
-    transition: opacity 0.6s ease, transform 0.6s ease;
-}
-
-.image-row {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 30px;
-    height: 300px;
-    overflow: hidden;
-    opacity: 0;
-    transform: translateY(50px);
-    transition: opacity 0.6s ease, transform 0.6s ease;
-}
-
-.image-row img {
-    height: 100%;
-    width: auto;
-    object-fit: contain;
-    border-radius: 10px;
-    transition: transform 0.3s ease;
-}
-
-.image-row img:hover {
-    transform: scale(1.05);
-}
-
-.sub-section.visible .section-title,
-.sub-section.visible .image-row {
-    opacity: 1;
-    transform: translateY(0);
-} */
 
 /* Feedback Form Section */
 #feedback-section {

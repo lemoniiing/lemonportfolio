@@ -14,29 +14,9 @@ window.addEventListener('scroll', () => {
   const rightLemon = document.querySelector('.lemon-half.right');
   leftLemon.style.transform = `translateX(-${scrollPosition * 0.5}px)`;
   rightLemon.style.transform = `translateX(${scrollPosition * 0.5}px)`;
-
-  // Slow scrolling parallax effect
-  const artworkSection = document.querySelector('.parallax-sections');
-  if (artworkSection) {
-    const speed = 0.02;
-    const backgroundPosition = scrollPosition * speed;
-    artworkSection.style.backgroundPosition = `center ${backgroundPosition}px`;
-  }
-
-  // Scroll animations for artwork section
-  const sections = document.querySelectorAll('.sub-section');
-  sections.forEach(section => {
-    const sectionTop = section.getBoundingClientRect().top;
-    const sectionHeight = section.offsetHeight;
-    if (sectionTop < window.innerHeight - sectionHeight / 4) {
-      section.classList.add('visible');
-    } else {
-      section.classList.remove('visible');
-    }
-  });
 });
 
-// Smooth scroll effect for header labels
+// Smooth scroll to sections
 document.querySelectorAll('header nav ul li a').forEach(anchor => {
   anchor.addEventListener('click', function (e) {
     e.preventDefault();
