@@ -45,7 +45,7 @@ document.getElementById('feedback-form').addEventListener('submit', function(eve
     const email = document.getElementById('email').value;
     const feedback = document.getElementById('feedback').value;
 
-    // Send the feedback data to the server
+    // Send feedback data to server
     fetch('http://localhost:3001/submit-feedback', {
         method: 'POST',
         headers: {

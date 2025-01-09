@@ -80,17 +80,17 @@ header nav ul li a:hover::after {
 /* Responsive header */
 @media (max-width: 768px) {
     header {
-        flex-direction: column; /* Stacks items vertically */
-        align-items: flex-start; /* Aligns items to the left */
+        flex-direction: column;
+        align-items: flex-start;
     }
 
     header nav {
-        flex-direction: column; /* Makes nav links stack vertically */
-        gap: 10px; /* Reduces spacing between links */
+        flex-direction: column;
+        gap: 10px;
     }
 
     header .logo {
-        font-size: 1.2rem; /* Adjusts logo size */
+        font-size: 1.2rem;
     }
 }
 
@@ -150,10 +150,10 @@ header nav ul li a:hover::after {
 }
 
 .text-wrapper {
-    max-width: 800px; /* Limits the width of the text */
-    margin: 0 auto; /* Centers the text */
-    padding: 0 20px; /* Adds padding for extra spacing */
-    text-align: center; /* Ensures the text stays centered */
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+    text-align: center;
 }
 
 .about-container h2 {
@@ -174,7 +174,6 @@ header nav ul li a:hover::after {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 30px; /* Adds space between the lemons */
     position: absolute;
     left: 50%;
     top: 50%;
@@ -183,7 +182,7 @@ header nav ul li a:hover::after {
 }
 
 .lemon-half {
-    width: 40%; /* Lemons retain their size */
+    width: 40%;
     transition: transform 1s ease-out;
     transform: translateX(0);
 }
@@ -191,16 +190,16 @@ header nav ul li a:hover::after {
 /* Responsive Design for About Section */
 @media (max-width: 768px) {
     .text-wrapper {
-        max-width: 90%; /* Adjusts text width for smaller screens */
+        max-width: 90%;
     }
 
     .lemon-images {
         flex-direction: column;
-        gap: 10px; /* Less gap for vertical stacking */
+        gap: 10px;
     }
 
     .lemon-half {
-        width: 70%; /* Adjusts lemon size for smaller screens */
+        width: 70%;
     }
 }
 
@@ -210,10 +209,10 @@ header nav ul li a:hover::after {
     height: var(--h);
     overflow-y: scroll;
     overflow-x: hidden;
-    perspective: 10px; /* Adds depth to the 3D effect */
+    perspective: 10px;
     background: url('images/artwork.jpg') no-repeat center center fixed;
-    background-size: cover; /* Ensures the background image covers the whole area */
-    position: relative; /* This will make it the reference point for the text positioning */
+    background-size: cover;
+    position: relative;
 }
 
 .fixed-text {
@@ -226,7 +225,7 @@ header nav ul li a:hover::after {
     text-shadow: 5px 5px 5px rgb(66, 58, 48);
 }
 
-/* Basic settings for all artwork layers */
+/* Settings for all artwork layers */
 .basic_setting {
     background-size: contain;
     background-repeat: no-repeat;
@@ -234,8 +233,8 @@ header nav ul li a:hover::after {
     height: 200%;
     position: absolute;
     top: 0;
-    filter: brightness(100%); /* Initial brightness */
-    transition: -webkit-filter 0.5s; /* Smooth transition on hover */
+    filter: brightness(100%);
+    transition: -webkit-filter 0.5s;
 }
 
 .basic_setting:hover {

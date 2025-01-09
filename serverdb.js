@@ -61,7 +61,7 @@ app.post('/submit-feedback', (req, res) => {
   });
 });
 
-// Start the server
+// Start server
 app.listen(PORT, () => {
   console.log(`Server running on http://localhost:${PORT}`);
 });
@@ -76,7 +76,7 @@ app.get('/export-feedback-json', (req, res) => {
       return res.status(500).json({ error: 'Failed to retrieve feedback data.' });
     }
 
-    // Save the feedback data to feedbackdb.json
+    // Save feedback data to feedbackdb.json file
     const fs = require('fs');
     fs.writeFileSync('feedbackdb.json', JSON.stringify(rows, null, 2));
 
